@@ -16,9 +16,10 @@ body {
 
 }
 nav {
-  height: 70px;
+  min-height: 70px;
   width: 100%;
 }
+
 .column {
   width: 33%;
   min-width: 200px;
@@ -40,19 +41,21 @@ nav {
   font-size: 36px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 36px;
+  text-decoration-thickness: 4px;
+  text-decoration: underline;
 }
 
 .card-body {
-
   border-radius: 20px;
   border: 7px solid #252422;
+  border-top: none;
+  border-bottom: none;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
+
 
 .card p {
   padding: 15px 20px 10px;
@@ -61,8 +64,45 @@ nav {
 }
 
 .project {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+
 }
+.project img {
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0  2px 2px #252422;
+}
+.project p {
+  font-size: 18px;
+  line-height: 18px;
+  width: 80%;
+}
+.project a {
+  background-color: #ff6225;
+  color: #fffcf7;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  border: #fffcf7 2px solid;
+
+  transition: ease all 0.2s;
+}
+.project a:hover {
+  background-color: #fffcf7;
+  border: #ff6225 2px solid;
+  color: #ff6225;
+}
+
 
 
 #about-img {
@@ -73,7 +113,36 @@ nav {
   box-shadow: 0 0  4px 4px #252422;
 }
 
+#projects {
+  margin-top: 75px;
+}
+#project-body {
+  padding: 15px 0;
+  overflow-y: scroll;
+}
 
+
+
+
+#education {
+  margin-top: 45px;
+}
+
+#contact a {
+  color: #252422;
+}
+
+#back-to-top {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#back-to-top a {
+  color: #252422;
+  font-size: 20px;
+}
 
 
 @media screen and (max-width: 922px) {
@@ -91,5 +160,13 @@ nav {
   .card-body {
     max-height: 550px;
   }
+
+  #projects, #education {
+    margin-top: 20px;
+  }
+  .card {
+    margin-top: 20px;
+  }
+
 
 }
