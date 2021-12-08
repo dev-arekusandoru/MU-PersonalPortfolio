@@ -1,12 +1,10 @@
+/*pretty common formatting to make sure no accidental margin/padding is added*/
 * {
   margin: 0;
   padding: 0;
 }
 
-html {
-
-  background-color: #252422;
-}
+/*set the display of the body, and font of all elements*/
 body {
   display: flex;
   flex-direction: row;
@@ -19,7 +17,9 @@ body {
   font-family: 'Poppins', sans-serif;
 
 }
-nav {
+
+/*style the header, and center the text*/
+header {
   min-height: 70px;
   width: 100%;
 
@@ -31,6 +31,7 @@ nav {
   justify-content: center;
 }
 
+/*add style rules for columns*/
 .column {
   width: 33%;
   min-width: 200px;
@@ -40,11 +41,13 @@ nav {
   flex-direction: column;
 }
 
+/*spacing/min sizing for cards*/
 .card {
   margin: 10px;
-
   min-height: 200px;
 }
+
+/*style the title of each card*/
 .card h1 {
   color: #252422;
   font-weight: bold;
@@ -56,6 +59,7 @@ nav {
   text-decoration: underline;
 }
 
+/*style the body of each card(the outline and display) */
 .card-body {
   border-radius: 20px;
   border: 7px solid #252422;
@@ -67,13 +71,14 @@ nav {
   align-items: center;
 }
 
-
+/*style the body text*/
 .card p {
   padding: 15px 20px 10px;
   text-align: justify;
   overflow-y: scroll;
 }
 
+/*just formatting of project div*/
 .project {
   display: flex;
   flex-direction: column;
@@ -81,6 +86,8 @@ nav {
   height: 300px;
 
 }
+
+/*each image should have a nice backdrop shadow and be sized properly*/
 .project img {
   width: 80%;
   border: 1px solid black;
@@ -92,6 +99,8 @@ nav {
   line-height: 18px;
   width: 80%;
 }
+
+/*style of the nice little button to view project*/
 .project a {
   background-color: #ff6225;
   color: #fffcf7;
@@ -108,14 +117,14 @@ nav {
 
   transition: ease all 0.2s;
 }
+/*Make it cool when hovering*/
 .project a:hover {
   background-color: #fffcf7;
   border: #ff6225 2px solid;
   color: #ff6225;
 }
 
-
-
+/*size/add shadow to my feature photo*/
 #about-img {
   margin-top: 10px;
   width: 95%;
@@ -124,25 +133,28 @@ nav {
   box-shadow: 0 0  4px 4px #252422;
 }
 
+/*offset the second column*/
 #projects {
   margin-top: 75px;
 }
+
+/*when the content overflows, scroll*/
 #project-body {
   padding: 15px 0;
   overflow-y: scroll;
 }
 
-
-
-
+/*offset the 3rd column*/
 #education {
   margin-top: 45px;
 }
 
+/*make the links pretty*/
 #contact a {
   color: #252422;
 }
 
+/*back to top div/link styles*/
 #back-to-top {
   height: 100px;
   width: 100%;
@@ -155,13 +167,16 @@ nav {
   font-size: 20px;
 }
 
-
+/* make display 2 columns wide when the screen gets too small*/
 @media screen and (max-width: 922px) {
   .column {
     width: 49%;
 
   }
 }
+
+/*now when its really small make it 1 column wide,
+and also make sure the cards arent too tall so cap the height and make them scrollable*/
 @media screen and (max-width: 620px) {
   .column {
     width: 99%;
